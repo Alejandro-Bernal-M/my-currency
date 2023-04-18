@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-1: #4369b2;
+  --color-2: #447add;
+}
+
 .currencies-holder {
   display: flex;
   flex-direction: row;
@@ -34,4 +39,12 @@
 
 .currency-data > a > p {
   text-align: center;
+}
+
+.color1 {
+  background-color: var(--color-1);
+}
+
+.color2 {
+  background-color: var(--color-2);
 }

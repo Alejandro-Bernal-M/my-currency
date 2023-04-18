@@ -1,8 +1,15 @@
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
-const CurrencyComponent = ({ title, description, price }) => (
-  <div className="currency-data">
+const CurrencyComponent = (
+  {
+    title,
+    description,
+    price,
+    color,
+  },
+) => (
+  <div className={color === 1 || color === 4 ? 'currency-data color1' : 'currency-data color2'}>
     <NavLink
       to={title}
     >
@@ -17,6 +24,7 @@ CurrencyComponent.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   price: PropTypes.number,
+  color: PropTypes.number.isRequired,
 };
 
 CurrencyComponent.defaultProps = {

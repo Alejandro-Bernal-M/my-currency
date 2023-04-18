@@ -40,6 +40,8 @@ const Home = () => {
     dispatch(changeMoney(e.target.value));
   };
 
+  let color = 0;
+
   return (
     <div className="App">
       <h1>
@@ -58,14 +60,21 @@ const Home = () => {
       </div>
       <div className="search-result" />
       <div className="currencies-holder">
-        {Object.keys(currencies).map((key) => (
-          <CurrencyComponent
-            key={key}
-            title={key}
-            description={currencies[key]}
-            price={price[key] * money}
-          />
-        ))}
+        {Object.keys(currencies).map((key) => {
+          color += 1;
+          if (color === 5) {
+            color = 1;
+          }
+          return (
+            <CurrencyComponent
+              key={key}
+              title={key}
+              description={currencies[key]}
+              price={price[key] * money}
+              color={color}
+            />
+          );
+        })}
       </div>
     </div>
   );
