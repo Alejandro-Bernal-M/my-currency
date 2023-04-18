@@ -18,9 +18,12 @@ function App() {
 
   return (
     <div className="App">
-      {Object.keys(currencies).map((key) => (
-        <CurrencyComponent key={key} title={key} description={currencies[key]} price={price[key]} />
-      ))}
+      <h1>With 1 USD you can buy:</h1>
+      <div className="currencies-holder">
+        {Object.keys(currencies).map((key) => (
+          <CurrencyComponent key={key} title={key} description={currencies[key]} price={price[key]} />
+        ))}
+      </div>
     </div>
   );
 }
