@@ -1,31 +1,17 @@
-import { useEffect } from 'react';
 import '../styles/App.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { getCurrencies, getCurrencyPrice } from '../redux/currency/currencySlice';
-import CurrencyComponent from './Currency';
+import { Routes, Route } from 'react-router-dom';
+import Home from '../routes/Home';
+import CurrencyDescription from '../routes/CurrencyDescription';
 
 
 function App() {
-  const dispatch = useDispatch();
-  const  currencies  = useSelector(state => state.currency.allCurrencies);
-  const price = useSelector(state => state.currency.usdPrice);
 
-  useEffect(() => {
-    dispatch(getCurrencies());
-    dispatch(getCurrencyPrice());
-  }, [dispatch]);
-
-
-  return (
-    <div className="App">
-      <h1>With 1 USD you can buy:</h1>
-      <div className="currencies-holder">
-        {Object.keys(currencies).map((key) => (
-          <CurrencyComponent key={key} title={key} description={currencies[key]} price={price[key]} />
-        ))}
-      </div>
-    </div>
-  );
+  return(
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/:id" element={<CurrencyDescription />} />
+  </Routes>
+  )
 }
 
 export default App;

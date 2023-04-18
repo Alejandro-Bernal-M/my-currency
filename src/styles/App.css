@@ -15,15 +15,23 @@
 
 .currency-data {
   width: 50%;
+}
+
+.currency-data > a {
+  text-decoration: none;
+  color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 10px;
 }
 
-.currency-data > h3 {
+.currency-data > a > h3 {
   text-transform: uppercase;
 }
 
-.currency-data > p {
+.currency-data > a > p {
   text-align: center;
 }
