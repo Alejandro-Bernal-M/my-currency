@@ -17,10 +17,10 @@ const CurrencyComponent = (
       <i className="arrow-icon">
         <BsFillArrowRightCircleFill />
       </i>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <p>{price}</p>
     </NavLink>
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <p>{price}</p>
   </div>
 );
 
