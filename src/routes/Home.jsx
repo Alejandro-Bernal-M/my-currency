@@ -30,6 +30,9 @@ const Home = () => {
       error.textContent = '';
       if (!currencies[search.value]) {
         error.textContent = 'Currency not found';
+        setTimeout(() => {
+          error.textContent = '';
+        }, 3000);
       } else {
         error.textContent = '';
         navigate(`/${search.value}`);
@@ -65,7 +68,7 @@ const Home = () => {
       <div className="search-result" />
       <hr className="divisor" />
       <div className="currencies-holder">
-        {Object.keys(currencies).map((key) => {
+        {currencies && Object.keys(currencies).map((key) => {
           color += 1;
           if (color === 5) {
             color = 1;

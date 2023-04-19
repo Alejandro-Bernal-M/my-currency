@@ -98,16 +98,12 @@ body {
 .currency-data {
   width: 50%;
   height: 200px;
-}
-
-.currency-data > a {
   text-decoration: none;
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
   padding: 10px;
 }
 
@@ -121,12 +117,12 @@ body {
   font-size: 23px;
 }
 
-.currency-data > a > h3 {
+.currency-data > h3 {
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.currency-data > a > p {
+.currency-data > p {
   text-align: center;
 }
 
