@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { BsSearch } from 'react-icons/bs';
 import { getCurrencies, getCurrencyPrice } from '../redux/currency/currencySlice';
 import CurrencyComponent from '../components/Currency';
 import { changeMoney } from '../redux/money/moneySlice';
@@ -20,15 +21,15 @@ const Home = () => {
   const handleSearch = () => {
     const search = document.querySelector('.search');
     const error = document.querySelector('.error');
-    const result = document.querySelector('.search-result');
     if (search.value === '') {
       error.textContent = 'Please enter a currency code';
-      result.textContent = '';
+      setTimeout(() => {
+        error.textContent = '';
+      }, 3000);
     } else {
       error.textContent = '';
       if (!currencies[search.value]) {
         error.textContent = 'Currency not found';
-        result.textContent = '';
       } else {
         error.textContent = '';
         navigate(`/${search.value}`);
@@ -44,19 +45,22 @@ const Home = () => {
 
   return (
     <div className="App">
-      <h1>
+      <div className="search-bar">
+        <input type="text" className="search" placeholder="search by code" />
+        <button type="button" className="search-btn" onClick={handleSearch}>
+          <BsSearch />
+        </button>
+        <p className="error" />
+      </div>
+      <h1 className="title">
         With
+        {' '}
         {money}
         {' '}
         USD you can buy:
       </h1>
-      <div>
+      <div className="money-holder">
         <input className="money" type="number" onChange={handleMoney} placeholder="How much money? (USD)" />
-      </div>
-      <div className="search-bar">
-        <input type="text" className="search" placeholder="search by code" />
-        <button type="button" onClick={handleSearch}>Filter</button>
-        <p className="error" />
       </div>
       <div className="search-result" />
       <div className="currencies-holder">

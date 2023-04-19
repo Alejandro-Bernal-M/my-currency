@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 
 const CurrencyComponent = (
   {
@@ -13,6 +14,9 @@ const CurrencyComponent = (
     <NavLink
       to={title}
     >
+      <i className="arrow-icon">
+        <BsFillArrowRightCircleFill />
+      </i>
       <h3>{title}</h3>
       <p>{description}</p>
       <p>{price}</p>
