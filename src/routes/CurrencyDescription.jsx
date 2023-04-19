@@ -1,5 +1,6 @@
 import { NavLink, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
 import { useState } from 'react';
 import { changeMoney } from '../redux/money/moneySlice';
 
@@ -21,6 +22,7 @@ const CurrencyDescription = () => {
     dispatch(changeMoney(e.target.value));
   };
 
+  let color = 0;
   return (
     <div>
       <div className="currency-info">
@@ -33,6 +35,7 @@ const CurrencyDescription = () => {
         <input className="money" type="number" onChange={handleMoney} placeholder="How much money? (USD)" />
         <p>
           With
+          {' '}
           {money}
           {' '}
           USD dollar, you can buy:
@@ -44,8 +47,15 @@ const CurrencyDescription = () => {
           {currencies[id]}
           s
         </p>
-        <NavLink to="/">back</NavLink>
+        <NavLink className="back-link" to="/">
+          <i className="back-arrow">
+            <BsFillArrowLeftCircleFill />
+          </i>
+          {' '}
+          Back
+        </NavLink>
       </div>
+      <hr className="divisor" />
       <div className="extraCurrencies">
         <h2>
           With 1
@@ -61,15 +71,19 @@ const CurrencyDescription = () => {
           you can buy:
         </h2>
         <div>
-          {extraCurrencies[id] && Object.keys(extraCurrencies[id]).map((key) => (
-            <div className="extraCurrency" key={key}>
-              <p>
-                {extraCurrencies[id][key]}
-                {' '}
-                {key}
-              </p>
-            </div>
-          ))}
+          {extraCurrencies[id] && Object.keys(extraCurrencies[id]).map((key) => {
+            color += 1;
+            return (
+              <div className={color % 2 === 0 ? 'extraCurrency color1' : 'extraCurrency color2'} key={key}>
+                <span>
+                  {key}
+                </span>
+                <p>
+                  {extraCurrencies[id][key]}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

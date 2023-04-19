@@ -63,6 +63,7 @@ const Home = () => {
         <input className="money" type="number" onChange={handleMoney} placeholder="How much money? (USD)" />
       </div>
       <div className="search-result" />
+      <hr className="divisor" />
       <div className="currencies-holder">
         {Object.keys(currencies).map((key) => {
           color += 1;
