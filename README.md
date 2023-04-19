@@ -67,8 +67,8 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-
-[Render](https://space-x-travelers.onrender.com/)
+[Live demo](https://drive.google.com/file/d/1wgARiuPFl28gF5zTK8KJav7RX8-gHx7X/view?usp=sharing)
+[Render](https://my-currency.onrender.com)
 
 <!-- GETTING STARTED -->
 
@@ -85,7 +85,7 @@ Node.js
 
 ### Setup
 
-git clone https://github.com/Alejandro-Bernal-M/Space-X-travelers.git
+git clone https://github.com/Alejandro-Bernal-M/my-currency.git
 
 
 ### Install
@@ -117,8 +117,6 @@ Under construction
 
 - GitHub: [Alejandro](https://github.com/Alejandro-Bernal-M)
 
-👤 **Author2**
-- GitHub: [David](https://github.com/DavidEspinoG)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -155,6 +153,7 @@ If you like this project give it a star.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 -I would like to thank Microverse.
+- I would like to thank  [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for the original design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
