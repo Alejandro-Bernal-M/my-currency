@@ -1,17 +1,17 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { BsSearch } from 'react-icons/bs';
 import { getCurrencies, getCurrencyPrice } from '../redux/currency/currencySlice';
 import CurrencyComponent from '../components/Currency';
-import { useNavigate } from 'react-router-dom';
 import { changeMoney } from '../redux/money/moneySlice';
 
 const Home = () => {
   const dispatch = useDispatch();
-  const  currencies  = useSelector(state => state.currency.allCurrencies);
-  const price = useSelector(state => state.currency.usdPrice);
-  const money = useSelector(state => state.money.value);
+  const currencies = useSelector((state) => state.currency.allCurrencies);
+  const price = useSelector((state) => state.currency.usdPrice);
+  const money = useSelector((state) => state.money.value);
   const navigate = useNavigate();
-  
 
   useEffect(() => {
     dispatch(getCurrencies());
@@ -21,17 +21,15 @@ const Home = () => {
   const handleSearch = () => {
     const search = document.querySelector('.search');
     const error = document.querySelector('.error');
-    const result = document.querySelector('.search-result');
-    if(search.value === '') {
+    if (search.value === '') {
       error.textContent = 'Please enter a currency code';
-      result.textContent = '';
-      return;
+      setTimeout(() => {
+        error.textContent = '';
+      }, 3000);
     } else {
       error.textContent = '';
-      if(!currencies[search.value]) {
+      if (!currencies[search.value]) {
         error.textContent = 'Currency not found';
-        result.textContent = '';
-        return;
       } else {
         error.textContent = '';
         navigate(`/${search.value}`);
@@ -43,26 +41,48 @@ const Home = () => {
     dispatch(changeMoney(e.target.value));
   };
 
+  let color = 0;
+
   return (
     <div className="App">
-      <h1>With {money} USD you can buy:</h1>
-      <div>
-        <input className='money' type="number" onChange={handleMoney} placeholder='How much money? (USD)'></input>
+      <div className="search-bar">
+        <input type="text" className="search" placeholder="search by code" />
+        <button type="button" className="search-btn" onClick={handleSearch}>
+          <BsSearch />
+        </button>
+        <p className="error" />
       </div>
-      <div className='search-bar'>
-        <input type='text' className='search' placeholder='search by code'></input>
-        <button type='button' onClick={handleSearch}>Filter</button>
-        <p className='error'></p>
+      <h1 className="title">
+        With
+        {' '}
+        {money}
+        {' '}
+        USD you can buy:
+      </h1>
+      <div className="money-holder">
+        <input className="money" type="number" onChange={handleMoney} placeholder="How much money? (USD)" />
       </div>
-      <div className='search-result'>
-      </div>
+      <div className="search-result" />
+      <hr className="divisor" />
       <div className="currencies-holder">
-        {Object.keys(currencies).map((key) => (
-          <CurrencyComponent key={key} title={key} description={currencies[key]} price={price[key]*money} />
-        ))}
+        {Object.keys(currencies).map((key) => {
+          color += 1;
+          if (color === 5) {
+            color = 1;
+          }
+          return (
+            <CurrencyComponent
+              key={key}
+              title={key}
+              description={currencies[key]}
+              price={price[key] * money}
+              color={color}
+            />
+          );
+        })}
       </div>
     </div>
   );
-}
+};
 
 export default Home;

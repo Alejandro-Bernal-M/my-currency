@@ -2,6 +2,87 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-1: #4268af;
+  --color-2: #3f62a4;
+  --color-3: #5788e3;
+  --color-4: #234380;
+}
+
+body {
+  font-family: 'Gill Sans', sans-serif;
+  background-color: var(--color-3);
+}
+
+.search-bar {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--color-4);
+}
+
+.search {
+  width: 90%;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 15px;
+  text-align: center;
+  background: transparent;
+  color: #fff;
+  border: none;
+  outline: #234380;
+}
+
+.error {
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  margin: 10px auto;
+  width: 80%;
+}
+
+::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.search-btn {
+  height: 30px;
+  background: transparent;
+  border: none;
+  font-size: 23px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  top: 6px;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin: 20px auto;
+  color: #fff;
+  width: 80%;
+}
+
+.money-holder {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.money {
+  text-align: center;
+  font-size: 15px;
+  margin: 10px auto;
+  width: 80%;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+}
+
 .currencies-holder {
   display: flex;
   flex-direction: row;
@@ -9,17 +90,19 @@
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  width: 95%;
+  width: 98%;
   margin: 0 auto;
+  padding-bottom: 30px;
 }
 
 .currency-data {
   width: 50%;
+  height: 200px;
 }
 
 .currency-data > a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,10 +111,92 @@
   padding: 10px;
 }
 
+.arrow-icon {
+  float: right;
+  position: relative;
+  top: 2px;
+  right: -72px;
+  color: #fff;
+  height: 5px;
+  font-size: 23px;
+}
+
 .currency-data > a > h3 {
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .currency-data > a > p {
   text-align: center;
+}
+
+.color1 {
+  background-color: var(--color-1);
+}
+
+.color2 {
+  background-color: var(--color-2);
+}
+
+.currency-info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 17px;
+}
+
+.currency-info > h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.back-arrow {
+  position: relative;
+  top: 4px;
+}
+
+.divisor {
+  height: 30px;
+  width: 100%;
+  background-color: var(--color-4);
+  border: none;
+  margin: 0;
+}
+
+.extraCurrencies > h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  margin: 20px auto;
+  color: #fff;
+  width: 80%;
+}
+
+.extraCurrency {
+  width: 100%;
+  height: 60px;
+  font-size: 18px;
+  color: #fff;
+  padding: 2px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.extraCurrency > span {
+  text-transform: uppercase;
 }
