@@ -39,7 +39,6 @@ describe('Home component', () => {
     expect(dispatch).toHaveBeenCalledWith(getCurrencyPrice());
   });
 
-
   it('displays error message when search is empty', () => {
     useSelector.mockReturnValueOnce({});
     const dispatch = jest.fn();

@@ -95,7 +95,7 @@ body {
   padding-bottom: 30px;
 }
 
-.currency-data  {
+.currency-data {
   width: 50%;
   height: 200px;
   text-decoration: none;
@@ -117,12 +117,12 @@ body {
   font-size: 23px;
 }
 
-.currency-data  > h3 {
+.currency-data > h3 {
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.currency-data  > p {
+.currency-data > p {
   text-align: center;
 }
 
