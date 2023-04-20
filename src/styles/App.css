@@ -156,8 +156,9 @@ body {
   color: #fff;
   font-size: 20px;
   text-align: center;
-  margin: 20px auto;
-  width: 80%;
+  margin: 15px;
+  position:relative;
+  top: 10px;
 }
 
 .back-arrow {

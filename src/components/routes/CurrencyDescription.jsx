@@ -25,6 +25,13 @@ const CurrencyDescription = () => {
   let color = 0;
   return (
     <div>
+      <NavLink className="back-link" to="/">
+        <i className="back-arrow">
+          <BsFillArrowLeftCircleFill />
+        </i>
+        {' '}
+        Back
+      </NavLink>
       <div className="currency-info">
         <h1>{id}</h1>
         <p>
@@ -47,13 +54,6 @@ const CurrencyDescription = () => {
           {currencies[id]}
           s
         </p>
-        <NavLink className="back-link" to="/">
-          <i className="back-arrow">
-            <BsFillArrowLeftCircleFill />
-          </i>
-          {' '}
-          Back
-        </NavLink>
       </div>
       <hr className="divisor" />
       <div className="extraCurrencies">
