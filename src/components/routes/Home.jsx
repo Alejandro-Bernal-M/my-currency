@@ -28,14 +28,14 @@ const Home = () => {
       }, 3000);
     } else {
       error.textContent = '';
-      if (!currencies[search.value]) {
+      if (!currencies[search.value.toLowerCase()]) {
         error.textContent = 'Currency not found';
         setTimeout(() => {
           error.textContent = '';
         }, 3000);
       } else {
         error.textContent = '';
-        navigate(`/${search.value}`);
+        navigate(`/${search.value.toLowerCase()}`);
       }
     }
   };
