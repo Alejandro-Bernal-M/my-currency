@@ -70,7 +70,7 @@
 [Live Demo on Render](https://my-currency.onrender.com)
 
 ## 🚀 Presentation Video <a name="presentation-video"></a>
-[Presentation Video](https://www.loom.com/share/7b7bae7f40a24734af88f8717fc81a06)
+[Presentation Video](https://www.loom.com/share/58e84fbb1d81489fb3c58ec1d75511b7)
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
