@@ -100,12 +100,12 @@ npm start
 
 ### Run tests
 
-Tests under construction
+npm test
 
 
 ### Deployment
 
-Under construction
+Deployed on [Render](https://my-currency.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
