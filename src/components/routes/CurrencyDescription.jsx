@@ -2,7 +2,7 @@ import { NavLink, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
 import { useState } from 'react';
-import { changeMoney } from '../redux/money/moneySlice';
+import { changeMoney } from '../../redux/money/moneySlice';
 
 const CurrencyDescription = () => {
   const { id } = useParams();

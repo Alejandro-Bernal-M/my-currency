@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs';
-import { getCurrencies, getCurrencyPrice } from '../redux/currency/currencySlice';
-import CurrencyComponent from '../components/Currency';
-import { changeMoney } from '../redux/money/moneySlice';
+import { getCurrencies, getCurrencyPrice } from '../../redux/currency/currencySlice';
+import CurrencyComponent from '../Currency';
+import { changeMoney } from '../../redux/money/moneySlice';
 
 const Home = () => {
   const dispatch = useDispatch();

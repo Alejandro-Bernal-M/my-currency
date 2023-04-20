@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCurrencies, getCurrencyPrice } from '../redux/currency/currencySlice';
 import { changeMoney } from '../redux/money/moneySlice';
-import Home from '../routes/Home';
+import Home from '../components/routes/Home';
 import CurrencyComponent from '../components/Currency';
 
 jest.mock('react-redux', () => ({
