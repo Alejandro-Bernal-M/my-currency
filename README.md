@@ -99,13 +99,12 @@ npm start
 
 
 ### Run tests
-
-npm test
+open the console and write `npm test` after installing it
 
 
 ### Deployment
 
-Deployed on [Render](https://my-currency.onrender.com)
+The project was deployed on [Render](https://my-currency.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
