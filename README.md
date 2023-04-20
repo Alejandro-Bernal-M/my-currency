@@ -67,9 +67,10 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-[Live demo](https://drive.google.com/file/d/1wgARiuPFl28gF5zTK8KJav7RX8-gHx7X/view?usp=sharing)
-[Render](https://my-currency.onrender.com)
+[Live Demo on Render](https://my-currency.onrender.com)
 
+## 🚀 Presentation Video <a name="presentation-video"></a>
+[Presentation Video](https://www.loom.com/share/7b7bae7f40a24734af88f8717fc81a06)
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
