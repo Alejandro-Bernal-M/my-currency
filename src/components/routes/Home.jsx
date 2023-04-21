@@ -40,6 +40,12 @@ const Home = () => {
     }
   };
 
+  const handleChange = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
   const handleMoney = (e) => {
     dispatch(changeMoney(e.target.value));
   };
@@ -49,7 +55,7 @@ const Home = () => {
   return (
     <div className="App">
       <div className="search-bar">
-        <input type="text" className="search" placeholder="search by code" />
+        <input type="text" className="search" placeholder="search by code" onKeyUp={handleChange} />
         <button type="button" className="search-btn" onClick={handleSearch}>
           <BsSearch />
         </button>
@@ -58,15 +64,25 @@ const Home = () => {
       <h1 className="title">
         With
         {' '}
-        {money}
+        <div className="divisor divisor1">
+          <input
+            className="money"
+            type="number"
+            onChange={handleMoney}
+            placeholder="Write here (USD)"
+          />
+        </div>
+        {/* {money} */}
         {' '}
-        USD you can buy:
+        USD you can buy the following currencies:
       </h1>
-      <div className="money-holder">
-        <input className="money" type="number" onChange={handleMoney} placeholder="How much money? (USD)" />
+      <div className="divisor">
+        {/* <div className="money-holder">
+          <input className="money"
+          type="number" onChange={handleMoney} placeholder="Write here (USD)" />
+        </div> */}
       </div>
       <div className="search-result" />
-      <hr className="divisor" />
       <div className="currencies-holder">
         {currencies && Object.keys(currencies).map((key) => {
           color += 1;

@@ -30,6 +30,7 @@ body {
   color: #fff;
   border: none;
   outline: #234380;
+  padding-left: 5%;
 }
 
 .error {
@@ -42,7 +43,8 @@ body {
 
 ::placeholder {
   color: #fff;
-  opacity: 0.5;
+  opacity: 0.9;
+  font-size: 17px;
 }
 
 .search-btn {
@@ -59,10 +61,11 @@ body {
 .title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 30px;
-  margin: 20px auto;
+  font-size: 28px;
+  margin: 8px auto;
   color: #fff;
   width: 80%;
+  line-height: 2;
 }
 
 .money-holder {
@@ -75,7 +78,7 @@ body {
 .money {
   text-align: center;
   font-size: 15px;
-  margin: 10px auto;
+  margin: 0 auto;
   width: 80%;
   border: none;
   border-radius: 6px;
@@ -90,7 +93,7 @@ body {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  width: 98%;
+  width: 100%;
   margin: 0 auto;
   padding-bottom: 30px;
 }
@@ -124,6 +127,7 @@ body {
 
 .currency-data > p {
   text-align: center;
+  text-transform: capitalize;
 }
 
 .color1 {
@@ -172,15 +176,24 @@ body {
   background-color: var(--color-4);
   border: none;
   margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.divisor1 {
+  width: 56%;
+  margin: 0 auto;
+  border-radius: 6px;
 }
 
 .extraCurrencies > h2 {
   text-align: center;
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 22px;
   margin: 20px auto;
   color: #fff;
   width: 80%;
+  line-height: 1.7;
 }
 
 .extraCurrency {

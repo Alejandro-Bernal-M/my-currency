@@ -39,7 +39,6 @@ const CurrencyDescription = () => {
           {' '}
           {currencies[id]}
         </p>
-        <input className="money" type="number" onChange={handleMoney} placeholder="How much money? (USD)" />
         <p>
           With
           {' '}
@@ -55,7 +54,11 @@ const CurrencyDescription = () => {
           s
         </p>
       </div>
-      <hr className="divisor" />
+      <div className="divisor">
+        <div className="money-holder">
+          <input className="money" type="number" onChange={handleMoney} placeholder="Write here (USD)" />
+        </div>
+      </div>
       <div className="extraCurrencies">
         <h2>
           With 1
@@ -68,7 +71,7 @@ const CurrencyDescription = () => {
             {extraCurrencies.date}
           </span>
           {' '}
-          you can buy:
+          you can buy the following currencies:
         </h2>
         <div>
           {extraCurrencies[id] && Object.keys(extraCurrencies[id]).map((key) => {
