@@ -41,7 +41,7 @@ const Home = () => {
   };
 
   const handleChange = (e) => {
-    if (e.key === 'Enter') {
+    if (e.keyCode === 13) {
       handleSearch();
     }
   };
